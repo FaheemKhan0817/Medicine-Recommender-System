@@ -1,90 +1,131 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
 /* Main container styling */
 .css-qrbaxs {
-    color: #ffffff;
-    background-color: #4CAF50; /* Changed to a green shade */
-    font-size: 25px;
-    padding: 2.4px;
-    border: 1px solid #2E7D32;
+    background-color: #ffffff;
+    padding: 20px;
     border-radius: 10px;
-}
-
-/* Paragraph, ordered list, unordered list, definition list styling */
-p, ol, ul, dl {
-    background-color: #E3F2FD; /* Light blue background */
-    padding: 20px 10px;
-    border-radius: 10px;
-    font-weight: 800;
-    font-size: 20px;
-    color: #1A237E; /* Dark blue text */
-}
-
-/* List item styling */
-.css-nlntq9 li {
-    margin: 0.2em 0px 0.2em 1.2em;
-    padding: 0px 0px 0px 0.6em;
-    font-size: 22px;
-    color: #1A237E; /* Dark blue text */
-}
-
-/* Button styling */
-.css-1cpxqw2 {
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
-    margin-bottom: 50px;
-    line-height: 1.6;
-    color: #ffffff; /* White text */
-    background-color: #4CAF50; /* Green background */
-    border: 1px solid #2E7D32;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.css-1cpxqw2:hover {
-    background-color: #388E3C; /* Darker green */
-    color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 /* Header styling */
 h1 {
-    color: #ffffff; /* White text */
-    background-color: #FF5722; /* Orange background */
-    border: 1px solid #BF360C;
-    border-radius: 25px;
-    padding: 5px;
+    color: #ffffff;
+    background-color: #2c3e50;
+    border-radius: 8px;
+    padding: 15px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph and list styling */
+p, ol, ul, dl {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+}
+
+/* List item styling */
+li {
+    margin: 0.5em 0;
+    padding: 0 0 0 1em;
+}
+
+/* Button styling */
+.stButton > button {
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-color: #27ae60;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.stButton > button:hover {
+    background-color: #2ecc71;
 }
 
 /* Anchor styling */
 a {
-    padding: 5px;
-    background-color: #ffffff;
-    border: 1px solid #4CAF50;
-    border-radius: 10px;
+    color: #333;
     text-decoration: none;
-    color: #4CAF50; /* Green text */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    background-color: #4CAF50; /* Green background */
-    color: #ffffff; /* White text */
+    color: #27ae60;
 }
 
-/* Streamlit button styling */
-.st-bt {
-    font-size: 25px;
+/* Streamlit selectbox styling */
+.stSelectbox {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.stSelectbox:focus {
+    border-color: #27ae60;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
+}
+
+/* Remove dropdown arrow */
+.stSelectbox select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: none;
+}
+
+/* Spinner styling */
+.stSpinner > div {
+    border-color: #27ae60 !important;
+}
+
+/* Image styling */
+.stImage img {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Error and warning message styling */
+.stAlert {
+    border-radius: 5px;
     font-weight: 600;
-    background-color: #FFEB3B; /* Yellow background */
-    border: 1px solid #FBC02D;
-    border-radius: 10px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 15px;
+    margin-bottom: 20px;
 }
 
-.st-bt:hover {
-    background-color: #FBC02D; /* Darker yellow */
-    color: #ffffff; /* White text */
+.stWarning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.stError {
+    background-color: #f8d7da;
+    color: #721c24;
 }
