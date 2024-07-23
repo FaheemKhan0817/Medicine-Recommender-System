@@ -2,25 +2,19 @@ import streamlit as st
 import pickle
 import pandas as pd
 from PIL import Image
-import gdown
 import os
 import zipfile
 import tempfile
 
-# Define the URL of your pickle file stored in Google Drive
-url = 'https://drive.google.com/uc?id=1ip2bX8nwYK30YM_8DcaPJ6PSeTPUCRXj'
+# Path to the zip file in the data folder
+zip_file_path = 'C:/ML Projects/Medicine-Recommender-System/data/Pickle-files.zip'
 
-# Path to save the downloaded file in a temporary directory
+# Path to save the extracted files in a temporary directory
 temp_dir = tempfile.gettempdir()
-output = os.path.join(temp_dir, 'pickle-file.zip')
-
-# Download the file if it does not exist
-if not os.path.exists(output):
-    gdown.download(url, output, quiet=False)
 
 # Extract the zip file into the temporary directory
 if not os.path.exists(os.path.join(temp_dir, 'medicine_dict.pkl')):
-    with zipfile.ZipFile(output, 'r') as zip_ref:
+    with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
         zip_ref.extractall(temp_dir)
 
 # To Add External CSS
