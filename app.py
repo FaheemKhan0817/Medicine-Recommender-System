@@ -2,6 +2,25 @@ import streamlit as st
 import pickle
 import pandas as pd
 from PIL import Image
+import gdown
+import os
+import patoolib
+import tempfile
+
+# Define the URL of your pickle file stored in Google Drive
+url = 'https://drive.google.com/uc?id=1LV4cFPzsghSVneCHMf7QhDZLXNVU4rij'
+
+# Path to save the downloaded file in a temporary directory
+temp_dir = tempfile.gettempdir()
+output = os.path.join(temp_dir, 'pickle-file.rar')
+
+# Download the file if it does not exist
+if not os.path.exists(output):
+    gdown.download(url, output, quiet=False)
+
+# Extract the rar file into the temporary directory
+if not os.path.exists(os.path.join(temp_dir, 'medicine_dict.pkl')):
+    patoolib.extract_archive(output, outdir=temp_dir)
 
 # To Add External CSS
 try:
@@ -14,8 +33,8 @@ except FileNotFoundError:
 @st.cache_data
 def load_data():
     try:
-        medicines_dict = pickle.load(open('medicine_dict.pkl', 'rb'))
-        similarity = pickle.load(open('similarity.pkl', 'rb'))
+        medicines_dict = pickle.load(open(os.path.join(temp_dir, 'medicine_dict.pkl'), 'rb'))
+        similarity = pickle.load(open(os.path.join(temp_dir, 'similarity.pkl'), 'rb'))
         medicines = pd.DataFrame(medicines_dict)
         return medicines, similarity
     except FileNotFoundError:
