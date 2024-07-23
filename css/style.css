@@ -1,0 +1,90 @@
+/* Main container styling */
+.css-qrbaxs {
+    color: #ffffff;
+    background-color: #4CAF50; /* Changed to a green shade */
+    font-size: 25px;
+    padding: 2.4px;
+    border: 1px solid #2E7D32;
+    border-radius: 10px;
+}
+
+/* Paragraph, ordered list, unordered list, definition list styling */
+p, ol, ul, dl {
+    background-color: #E3F2FD; /* Light blue background */
+    padding: 20px 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 20px;
+    color: #1A237E; /* Dark blue text */
+}
+
+/* List item styling */
+.css-nlntq9 li {
+    margin: 0.2em 0px 0.2em 1.2em;
+    padding: 0px 0px 0px 0.6em;
+    font-size: 22px;
+    color: #1A237E; /* Dark blue text */
+}
+
+/* Button styling */
+.css-1cpxqw2 {
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    margin-bottom: 50px;
+    line-height: 1.6;
+    color: #ffffff; /* White text */
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid #2E7D32;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.css-1cpxqw2:hover {
+    background-color: #388E3C; /* Darker green */
+    color: #ffffff;
+}
+
+/* Header styling */
+h1 {
+    color: #ffffff; /* White text */
+    background-color: #FF5722; /* Orange background */
+    border: 1px solid #BF360C;
+    border-radius: 25px;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Anchor styling */
+a {
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #4CAF50;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #4CAF50; /* Green text */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    background-color: #4CAF50; /* Green background */
+    color: #ffffff; /* White text */
+}
+
+/* Streamlit button styling */
+.st-bt {
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #FFEB3B; /* Yellow background */
+    border: 1px solid #FBC02D;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.st-bt:hover {
+    background-color: #FBC02D; /* Darker yellow */
+    color: #ffffff; /* White text */
+}
