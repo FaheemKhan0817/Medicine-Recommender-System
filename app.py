@@ -4,23 +4,24 @@ import pandas as pd
 from PIL import Image
 import gdown
 import os
-import patoolib
+import zipfile
 import tempfile
 
 # Define the URL of your pickle file stored in Google Drive
-url = 'https://drive.google.com/uc?id=1LV4cFPzsghSVneCHMf7QhDZLXNVU4rij'
+url = 'https://drive.google.com/file/d/1ip2bX8nwYK30YM_8DcaPJ6PSeTPUCRXj/view?usp=sharing'
 
 # Path to save the downloaded file in a temporary directory
 temp_dir = tempfile.gettempdir()
-output = os.path.join(temp_dir, 'pickle-file.rar')
+output = os.path.join(temp_dir, 'pickle-file.zip')
 
 # Download the file if it does not exist
 if not os.path.exists(output):
     gdown.download(url, output, quiet=False)
 
-# Extract the rar file into the temporary directory
+# Extract the zip file into the temporary directory
 if not os.path.exists(os.path.join(temp_dir, 'medicine_dict.pkl')):
-    patoolib.extract_archive(output, outdir=temp_dir)
+    with zipfile.ZipFile(output, 'r') as zip_ref:
+        zip_ref.extractall(temp_dir)
 
 # To Add External CSS
 try:
