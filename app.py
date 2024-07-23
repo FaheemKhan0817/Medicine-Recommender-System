@@ -8,7 +8,7 @@ import zipfile
 import tempfile
 
 # Define the URL of your pickle file stored in Google Drive
-url = 'https://drive.google.com/file/d/1ip2bX8nwYK30YM_8DcaPJ6PSeTPUCRXj/view?usp=sharing'
+url = 'https://drive.google.com/uc?id=1ip2bX8nwYK30YM_8DcaPJ6PSeTPUCRXj'
 
 # Path to save the downloaded file in a temporary directory
 temp_dir = tempfile.gettempdir()
